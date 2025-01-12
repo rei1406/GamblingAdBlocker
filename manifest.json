@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Shinigami Gambling Ad Blocker",
+    "name": "Gambling Ad Blocker",
     "version": "1.0",
-    "description": "Blocks gambling-related ads on websites with 'shinigami' in the URL.",
+    "description": "Blocks gambling-related ads",
     "permissions": [
         "activeTab"
     ],

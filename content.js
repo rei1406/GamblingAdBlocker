@@ -1,20 +1,12 @@
+// Blocked : Shinigami, Kuramanime, Otakudesu
 document.addEventListener("DOMContentLoaded", () => {
-    const kaya303 = document.querySelectorAll(`[alt='Kaya303']`);
-    const regularAds = document.querySelectorAll(`[alt='Advertisement']`);
-    if (kaya303) kaya303.forEach((el) => el.remove());
-    if (regularAds) regularAds.forEach((el) => el.remove());
-
     const addCSS = (s) =>
         (document.head.appendChild(document.createElement("style")).innerHTML =
             s);
 
     addCSS(
         `
-            .lepopup-popup-overlay {
-                display: none !important;
-            }
-                        
-            .lepopup-popup-container {
+            #aboveDownloadBannerSection, #aboveListBannerSection, #headerBannerSection, #abovePlayerBannerSection, #floatingFooterBannerSection, a[href='https://kantongdoraemon.com/djn/'], .lepopup-popup-overlay, .lepopup-popup-container, img[alt="Advertisement"], img[alt="Kaya303"], .iklannew-container-single, .iklannew-container, img[alt="Iklan 1"], img[alt="Iklan 2"], .body-bottom-ads, .iklan, #iklanbawah, .iklanpost {
                 display: none !important;
             }
         `
