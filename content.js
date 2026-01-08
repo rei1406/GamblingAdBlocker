@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Hide the #headerBannerSection element if it exists
         addCSS(
             `
-            #headerBannerSection, #abovePlayerBannerSection, #aboveListBannerSection, #aboveDownloadBannerSection, #floatingFooterBannerSection {
+            #headerBannerSection, #abovePlayerBannerSection, #aboveListBannerSection, #aboveDownloadBannerSection, #floatingFooterBannerSection, #aboveEpisodeListBannerSection {
                 display: none !important;
             }
             `
@@ -46,6 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
         addCSS(
             `
             .iklan, .bloxkln, #iklantengah1, .iklanpost, #overplay {
+                display: none !important;
+            }
+            `
+        );
+    }
+
+    if(currentUrl.includes('komikcast')) {
+        // Hide the #headerBannerSection element if it exists
+        addCSS(
+            `
+            .kln {
                 display: none !important;
             }
             `
