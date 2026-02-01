@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Only run on shinigami websites
     const currentUrl = window.location.href.toLowerCase();
     if (currentUrl.includes('shinigami')) {
+        sessionStorage.setItem('showAds', 0);
         // Run on page load
         hideGifImages();
 
