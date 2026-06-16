@@ -1,9 +1,10 @@
 // Blocked : Shinigami, Kuramanime, Otakudesu
 document.addEventListener("DOMContentLoaded", () => {
     // Hide GIF images and their parent elements for shinigami websites only
-    const hideGifImages = () => {
+    const hideShinigamiAdsAndPopups = () => {
         const gifImages = document.querySelectorAll('img[src$=".gif"]');
-        
+        sessionStorage.setItem('showAds', 0);
+
         gifImages.forEach(img => {
             // Hide the image itself
             img.style.display = 'none';
@@ -22,12 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Only run on shinigami websites
     const currentUrl = window.location.href.toLowerCase();
     if (currentUrl.includes('shinigami')) {
-        sessionStorage.setItem('showAds', 0);
         // Run on page load
-        hideGifImages();
+        hideShinigamiAdsAndPopups();
 
         // Also run when new content is added (for dynamic content)
-        const observer = new MutationObserver(hideGifImages);
+        const observer = new MutationObserver(hideShinigamiAdsAndPopups);
         observer.observe(document.body, { childList: true, subtree: true });
     }
 
